@@ -1,0 +1,54 @@
+# ==========================================
+# Ignorar archivos de información y datos confidenciales (Portafolio Público)
+# ==========================================
+*.xlsx
+*.xls
+*.csv
+*.pdf
+*.log
+*.sql
+*.db
+*.sqlite
+*.db-journal
+.env
+.env.*
+.env.local
+
+# Ignorar imágenes y adjuntos pesados del sistema (privados)
+images/
+images_webp/
+img/
+public/img/
+img_portada.jpg
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+
+# Ignorar configuraciones de agentes y herramientas AI
+.claude/
+.claude
+.gemini/
+.gemini
+.agents/
+.agents
+
+# Ignorar carpetas de dependencias y compilación
+.venv/
+venv/
+node_modules/
+.next/
+dist/
+build/
+*.spec
+__pycache__/
+*.tsbuildinfo
+
+# Ignorar toda la documentación adicional que no sea el README.md
+*.md
+!README.md
+!readme.md
+**/*.md
+!**/README.md
+!**/readme.md

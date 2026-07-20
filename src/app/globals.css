@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Safe-area para iPhones con muesca / Dynamic Island */
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+}
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Evita desbordamiento horizontal en móvil (afecta orbes decorativos y similares) */
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Mejora respuesta al toque en botones e inputs */
+  button, input, select, textarea, label {
+    touch-action: manipulation;
+  }
+
+  /* Scrollbar clara */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-100;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 rounded-full border-2 border-slate-100;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-400;
+  }
+}
